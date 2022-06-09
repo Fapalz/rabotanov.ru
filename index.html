@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>SEO продвижение</title>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="page-header">
+          <div class="row justify-content-between align-items-center gx-5 gy-4">
+            <div class="col-auto">
+              <div class="logo" data-aos="fade-left" data-aos-anchor-placement="top-center" data-aos-delay="300">
+                <a href="/">
+                  <img src="/assets/image/logo.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-auto flex-grow-1">
+              <div class="" data-aos="zoom-in">
+                <ul class="menu">
+                  <li><a href="/seo-audit/">SEO аудит</a></li>
+                  <li><a href="/webdev/">Разработка</a></li>
+                  <li><a href="/contacts/">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="seo-master" data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="600">
+                <div class="avatar">
+                  <img src="/assets/image/avatar.png" alt="">
+                </div>
+                <div class="seo-master__text">
+                  Николай Работанов<br>
+                  Опыт: <span class="color">400+ проектов</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section-1">
+      <div class="container">
+        <div class="row align-items-start gy-12">
+          <div class="col-md-8 left">
+            <h1>Привет<br>
+              Меня зовут <br>Николай Работанов</h1>
+            <div class="headline-subtext">
+              <div class="text-1 text-subtitle-2">Являюсь IT-специалистом</div>
+              <div class="text-2 text-subtitle-1 mt-2">В области web-разработки и интернет-маркетинга</div>
+            </div>
+          </div>
+          <div class="col-md-4 right" data-aos="fade-right">
+            <div class="description mb-12">
+              Получите бесплатную консультацию по интересующей вас услуги.<br>
+              Или просто звоните поболтать :)
+            </div>
+            <div class="button-container">
+              <button class="button" data-fancybox data-src="#form-modal">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="home-contact">
+      <div class="container">
+        <div class="row justify-content-between g-5">
+          <div class="col-12 col-md-auto">
+            <div class="text-subtitle-3">Телефон</div>
+            <a class="phone" href="tel:89956626692">8 995 662 6692</a>
+          </div>
+          <div class="col-12 col-md-auto">
+            <div class="text-subtitle-3">Социальные сети</div>
+            <ul class="social">
+              <li><a href="" title="telegram"><img src="/assets/image/telegram.svg" alt="">Telegram</a></li>
+              <li><a href="" title="instagram"><img src="/assets/image/instagram.svg" alt="">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="noise"></div>
+
+    <div id="form-modal" style="display: none;">
+      <div class="form">
+        <script data-b24-form="inline/4/4qs0cm" data-skip-moving="true">
+          (function (w, d, u) {
+            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 180000 | 0);
+            var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+          })(window, document, 'https://cdn-ru.bitrix24.ru/b16952484/crm/form/loader_4.js');
+        </script>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      once: true,
+    });
+    Fancybox.bind("[data-fancybox]", {
+      // Your options go here
+    });
+
+    let tl = gsap.timeline({
+      // yes, we can add it to an entire timeline!
+      scrollTrigger: {
+        trigger: ".items-wrapper",
+        pin: true,   // pin the trigger element while active
+        start: "center center", // when the top of the trigger hits the top of the viewport
+        end: "+=1000", // end after scrolling 500px beyond the start
+        scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      }
+    });
+
+    let items = document.querySelector('.section-7 .items');
+    let width = items.scrollWidth - items.offsetWidth;
+    //let width = items.scrollWidth;
+
+    //tl.from(".items-scroll", { autoAlpha: 0, y: 100 })
+    tl.to(".items", { x: -1 * width })
+      .from(".items", {})
+  </script>
+
+</body>
+
+</html>
