@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"./src/js/main.js":function(s,a,n){"use strict";n.r(a);var o=n("./node_modules/@fancyapps/ui/dist/fancybox.esm.js"),c=n("./node_modules/aos/dist/aos.js"),i=n.n(c);o.a.bind("[data-fancybox]",{placeFocusBack:!1,Image:{zoom:!1}}),i.a.init()}},[["./src/js/main.js",0,3]]]);

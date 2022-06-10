@@ -101,34 +101,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-  <script>
-    AOS.init({
-      once: true,
-    });
-    Fancybox.bind("[data-fancybox]", {
-      // Your options go here
-    });
-
-    let tl = gsap.timeline({
-      // yes, we can add it to an entire timeline!
-      scrollTrigger: {
-        trigger: ".items-wrapper",
-        pin: true,   // pin the trigger element while active
-        start: "center center", // when the top of the trigger hits the top of the viewport
-        end: "+=1000", // end after scrolling 500px beyond the start
-        scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      }
-    });
-
-    let items = document.querySelector('.section-7 .items');
-    let width = items.scrollWidth - items.offsetWidth;
-    //let width = items.scrollWidth;
-
-    //tl.from(".items-scroll", { autoAlpha: 0, y: 100 })
-    tl.to(".items", { x: -1 * width })
-      .from(".items", {})
-  </script>
+  <script src="/js/main.js"></script>
 
 </body>
 
