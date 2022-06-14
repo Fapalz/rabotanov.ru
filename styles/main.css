@@ -1008,3 +1008,8 @@ h3 {
     padding-right: 30px
   }
 }
+
+.improvement img {
+  width: 100px;
+  height: auto;
+}
